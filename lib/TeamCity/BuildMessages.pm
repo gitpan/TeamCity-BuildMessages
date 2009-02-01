@@ -1,12 +1,12 @@
 package TeamCity::BuildMessages;
 
-use 5.010;
+use 5.008004;
 use utf8;
 use strict;
 use warnings;
 
 
-use version; our $VERSION = qv('v0.999.1');
+use version; our $VERSION = qv('v0.999.2');
 
 
 use autodie qw< :default >;
@@ -99,7 +99,7 @@ TeamCity::BuildMessages - Encode and emit messages that TeamCity can interpret d
 
 =head1 VERSION
 
-This document describes TeamCity::BuildMessages version 0.999.1.
+This document describes TeamCity::BuildMessages version 0.999.2.
 
 
 =head1 SYNOPSIS

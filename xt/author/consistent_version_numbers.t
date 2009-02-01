@@ -3,13 +3,13 @@
 # Taken from
 # http://www.chrisdolan.net/talk/index.php/2005/11/14/private-regression-tests/.
 
-use 5.010;
+use 5.008004;
 use utf8;
 
 use strict;
 use warnings;
 
-use version; our $VERSION = qv('v0.999.1');
+use version; our $VERSION = qv('v0.999.2');
 
 use File::Find;
 use File::Slurp;

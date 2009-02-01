@@ -1,4 +1,4 @@
-use 5.010;
+use 5.008004;
 use utf8;
 
 use strict;
@@ -57,7 +57,7 @@ my $builder = $class->new(
     requires            => {
         'autodie'           => 0,
         'Carp'              => 0,
-        'Exporter'          => 0,
+        'Exporter'          => 5.58,
         'IO::Handle'        => 0,
         'Readonly'          => 1.03,
         'strict'            => 0,

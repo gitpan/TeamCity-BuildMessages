@@ -1,6 +1,6 @@
-TeamCity::BuildMessages version 0.0.1.
+TeamCity::BuildMessages version 0.999.2.
 
-List modules used by a set of Perl code.
+Encode and emit messages that TeamCity can interpret during a build.
 
 
 

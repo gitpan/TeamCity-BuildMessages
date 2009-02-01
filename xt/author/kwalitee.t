@@ -1,12 +1,12 @@
 #!/usr/bin/env perl
 
 use utf8;
-use 5.010;
+use 5.008004;
 
 use strict;
 use warnings;
 
-use version; our $VERSION = qv('v0.999.1');
+use version; our $VERSION = qv('v0.999.2');
 
 use Test::More;
 use Test::Kwalitee;

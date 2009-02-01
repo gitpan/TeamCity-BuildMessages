@@ -1,5 +1,11 @@
 Revision history for TeamCity::BuildMessages.
 
+v0.999.2  2009/1/31
+
+    Reduce required perl version to 5.8.4 so that it can be used for automated
+    builds of Perl::Critic.
+
+
 v0.999.1  2009/1/4
 
     Initial release.
