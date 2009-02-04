@@ -9,7 +9,7 @@ use utf8;
 use strict;
 use warnings;
 
-use version; our $VERSION = qv('v0.999.2');
+use version; our $VERSION = qv('v0.999.3');
 
 # No POD coverage due to complaints about builtins when using Fatal.
 use Test::Distribution ( distversion => 1, not => 'podcover' );

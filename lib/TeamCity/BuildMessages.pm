@@ -6,7 +6,7 @@ use strict;
 use warnings;
 
 
-use version; our $VERSION = qv('v0.999.2');
+use version; our $VERSION = qv('v0.999.3');
 
 
 use autodie qw< :default >;
@@ -64,7 +64,7 @@ sub _emit_build_message_to_handle {
         print {$handle} q< '>, teamcity_escape($values[0]), q<'>;
     } else {
         if (@values % 2) {
-            croak 'Message parameter given without a value.';
+            croak 'Message property given without a value.';
         } # end if
 
         while (@values) {
@@ -78,7 +78,7 @@ sub _emit_build_message_to_handle {
         } # end while
     } # end if
 
-    say {$handle} q<]>;
+    print {$handle} "]\n";
 
     return;
 } # end _emit_build_message_to_handle()
@@ -99,7 +99,7 @@ TeamCity::BuildMessages - Encode and emit messages that TeamCity can interpret d
 
 =head1 VERSION
 
-This document describes TeamCity::BuildMessages version 0.999.2.
+This document describes TeamCity::BuildMessages version 0.999.3.
 
 
 =head1 SYNOPSIS
@@ -111,9 +111,9 @@ This document describes TeamCity::BuildMessages version 0.999.2.
     teamcity_emit_build_message('messageName', 'value');
     teamcity_emit_build_message(
         'messageName',
-        parameterName => 'parameter value',
+        propertyName => 'property value',
     );
-    teamcity_emit_build_message('messageName', %parameters);
+    teamcity_emit_build_message('messageName', %properties);
 
 
 =head1 DESCRIPTION
@@ -136,7 +136,7 @@ Returns a version of the parameter with TeamCity escapes applied to it, e.g.
 C<\n> becomes C<|n>.
 
 
-=item C<teamcity_emit_build_message($message_name, $parameter_value)> or C<< teamcity_emit_build_message($message_name, parameter1 => 'value1', parameter2 => 'value2', ...) >>
+=item C<teamcity_emit_build_message($message_name, $property_value)> or C<< teamcity_emit_build_message($message_name, property1 => 'value1', property2 => 'value2', ...) >>
 
 Writes a message to STDOUT in a form that TeamCity can understand.  See the
 TeamCity documentation for valid messages.
@@ -167,9 +167,9 @@ that didn't consist of a letter or underscore followed by any number of
 alphanumerics and underscores.
 
 
-=item Message parameter given without a value.
+=item Message property given without a value.
 
-C<teamcity_emit_build_message()> was called with an odd number of parameter
+C<teamcity_emit_build_message()> was called with an odd number of property
 values.  If there is more than one value given, each value must have a name,
 e.g. this is wrong:
 
@@ -193,7 +193,7 @@ None, currently.
 
 =head1 DEPENDENCIES
 
-perl 5.10
+perl 5.8.4
 
 L<Readonly>
 

@@ -9,7 +9,7 @@ use warnings;
 use Readonly;
 
 
-use version; our $VERSION = qv('v0.999.2');
+use version; our $VERSION = qv('v0.999.3');
 
 
 use TeamCity::BuildMessages qw< teamcity_escape >;

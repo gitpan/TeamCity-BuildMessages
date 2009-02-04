@@ -67,7 +67,8 @@ my $builder = $class->new(
     },
 
     build_requires      => {
-        'Test::More'    => 0.72,
+        'Test::Exception'   => 0,
+        'Test::More'        => 0.72,
     },
 
     recommends          => {
